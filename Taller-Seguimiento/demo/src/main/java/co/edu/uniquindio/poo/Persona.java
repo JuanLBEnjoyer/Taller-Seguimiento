@@ -1,9 +1,9 @@
 package co.edu.uniquindio.poo;
 
 public abstract class Persona {
-    private final String nombre;
-    private final String apellido;
-    private final byte edad;
+    protected String nombre;
+    protected String apellido;
+    protected byte edad;
 
     public Persona(String nombre, String apellido, Byte edad){
         assert nombre != null && nombre.isBlank();
@@ -15,12 +15,11 @@ public abstract class Persona {
 
     }
 
-    public String getNombreCompleto(){
-        return nombre + " "+apellido;
-    }
+    public abstract String getNombre();
+    public abstract String getApellido();
+    public abstract Byte gedEdad();    
+    public abstract void setNombre(String nombre);
+    public abstract void setApellido(String apellido);
+    public abstract void setEdad(Byte edad);
 
-    public byte getEdad() {
-        return edad;
-    }
-    
 }
